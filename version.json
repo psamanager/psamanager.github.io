@@ -1,6 +1,6 @@
 {
-  "versionCode": 13,
-  "versionName": "1.13-debug",
+  "versionCode": 14,
+  "versionName": "1.14-debug1",
   "apkUrl": "https://psamanager.github.io/TVSTREAMX.apk",
   "changelog": "🚀 Novidades da Versão:\n• Novo Menu Rápido no Player:\n  - Pressione ⬅️ (Esquerda) no controle para ver a lista de canais da categoria atual.\n  - Pressione ⬅️ (Esquerda) novamente para abrir a lista de categorias.\n• Troca rápida de canais sem precisar sair da reprodução.\n• Suporte completo a TV Ao Vivo com EPG, Filmes e Séries.\n• Navegação otimizada para controle remoto (D-Pad).\n• Melhorias gerais de estabilidade e desempenho."
 }
