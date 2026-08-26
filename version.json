@@ -1,6 +1,7 @@
 {
-  "versionCode": 29,
-  "versionName": "1.29-debugEPG",
-  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/v1.29-debugEPG/TVSTREAMX.apk",
-  "changelog": "🚀 NOVIDADES DA VERSÃO 1.28:\n\n⏱️ Guia em Tempo Real: Programação e tempo restante agora atualizam segundo a segundo na tela.\n⚡ Novo Motor de Vídeo: Reprodução ultrarrápida e sem travamentos em TV Box e Fire TV.\n🛡️ Conexão Blindada: Proteção reforçada contra bloqueios de operadoras e troca inteligente de servidores.\n🎮 Menu Rápido: Pressione ⬅️ (Esquerda) no controle para navegar pelos canais sem pausar o vídeo.\n🎬 Filmes & Séries: Capas, sinopses e detalhes em alta definição."
+  "versionCode": 30,
+  "versionName": "1.30-ToastUpdate",
+  "mandatory": true,
+  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/v1.30-ToastUpdate/TVSTREAMX.apk",
+  "changelog": "✨ O TVSTREAMX ACABA DE SUBIR DE NÍVEL!\n\n⏱️ Interface Viva em Tempo Real: O guia de programação agora respira ao vivo na sua tela, com contagem regressiva e progresso com precisão segundo a segundo.\n\n⚡ Resposta Instantânea: Otimização profunda no núcleo do aplicativo para responder na velocidade de cada clique do controle.\n\n🚀 Atualizações Inteligentes: Nova tecnologia que mantém seu aplicativo sempre pronto e na crista da onda.\n\n🍿 Sente-se no sofá, aperte o Play e aproveite a sua melhor experiência de streaming!"
 }
