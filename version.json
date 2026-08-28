@@ -1,7 +1,7 @@
 {
-  "versionCode": 31,
-  "versionName": "1.31",
+  "versionCode": 34,
+  "versionName": "1.34-debuglogin2",
   "mandatory": true,
-  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/v1.31/TVSTREAMX.apk",
-  "changelog": "✨ O TVSTREAMX ACABA DE SUBIR DE NÍVEL!\n\n⏱️ Interface Viva em Tempo Real: O guia de programação agora respira ao vivo na sua tela, com contagem regressiva e progresso com precisão segundo a segundo.\n\n⚡ Resposta Instantânea: Otimização profunda no núcleo do aplicativo para responder na velocidade de cada clique do controle.\n\n🚀 Atualizações Inteligentes: Nova tecnologia que mantém seu aplicativo sempre pronto e na crista da onda.\n\n🍿 Sente-se no sofá, aperte o Play e aproveite a sua melhor experiência de streaming!"
+  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/v1.34-debuglogin2/TVSTREAMX.apk",
+  "changelog": "🚀 O TVSTREAMX CHEGOU À VERSÃO 1.34!\n\n🔒 Autenticação VIP Blindada: Novo sistema de login com criptografia e trava por Hardware ID.\n\n🎬 Pular Abertura Inteligente: Pule a intro das suas séries favoritas com apenas um clique!\n\n🍿 Maratona Automática (UpNext): O próximo episódio agora inicia sozinho nos últimos segundos do vídeo!\n\n🖤 Visual Dark OLED Puro: Nova interface preta absoluta de alto contraste, perfeita para TVs e celulares.\n\n⚡ Estabilidade Máxima: Monitor de conexão contínuo para evitar quedas e congelamentos durante o streaming."
 }
