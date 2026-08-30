@@ -1,7 +1,7 @@
 {
-  "versionCode": 34,
-  "versionName": "1.34-debuglogin2",
+  "versionCode": 36,
+  "versionName": "1.36-ALLBLACK",
   "mandatory": true,
-  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/v1.34-debuglogin2/TVSTREAMX.apk",
-  "changelog": "🚀 O TVSTREAMX CHEGOU À VERSÃO 1.34!\n\n🔒 Autenticação VIP Blindada: Novo sistema de login com criptografia e trava por Hardware ID.\n\n🎬 Pular Abertura Inteligente: Pule a intro das suas séries favoritas com apenas um clique!\n\n🍿 Maratona Automática (UpNext): O próximo episódio agora inicia sozinho nos últimos segundos do vídeo!\n\n🖤 Visual Dark OLED Puro: Nova interface preta absoluta de alto contraste, perfeita para TVs e celulares.\n\n⚡ Estabilidade Máxima: Monitor de conexão contínuo para evitar quedas e congelamentos durante o streaming."
+  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.36-ALLBLACK/TVSTREAMX.apk",
+  "changelog": "🚀 NOVIDADES DA VERSÃO 1.36 (ALL BLACK)\n\n🖤 Visual Amoled Total Black: Interface 100% preta pura com destaques em Coral Red, sem névoas e sem cortes.\n\n⚡ Abertura Instantânea: Fim definitivo da tela branca ao iniciar em Firestick e TV Boxes.\n\n📊 Painel de Dados Técnicos: Monitore resolução, codec, FPS e buffer em tempo real dentro do player.\n\n📅 Status da Conta no Topo: Usuário e data de validade visíveis direto na tela inicial, com alerta de renovação.\n\n🌐 Logos Atualizados & APK Leve: Logos de canais agora carregam direto da lista, reduzindo o peso do app.\n\n🚜 Player LibVLC Turbinado: Fim das travadas e conexões instáveis em transmissões ao vivo."
 }
