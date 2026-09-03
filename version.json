@@ -1,7 +1,7 @@
 {
-  "versionCode": 41,
-  "versionName": "1.41-beta1",
+  "versionCode": 42,
+  "versionName": "1.42-DebugBeta2",
   "mandatory": true,
-  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.41-beta1/TVSTREAMX.apk",
-  "changelog": "🚀 NOVIDADES DA VERSÃO 1.41 (1.41-beta1)\n\n🖤 Visual Amoled Total Black: Interface 100% preta pura com destaques em Coral Red, sem névoas e sem cortes.\n\n📅 Status da Conta no Topo: Usuário e data de validade visíveis direto na tela inicial, com alerta de renovação.\n\n🚜 Player LibVLC Turbinado: Fim das travadas e conexões instáveis em transmissões ao vivo."
+  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.42-DebugBeta2/TVSTREAMX.apk",
+  "changelog": "🚀 NOVIDADES DA VERSÃO 1.42 (1.42-DebugBeta2)\n\n📅 Status da Conta no Topo: Usuário e data de validade visíveis direto na tela inicial, com alerta de renovação."
 }
