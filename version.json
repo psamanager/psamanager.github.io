@@ -1,7 +1,7 @@
 {
-  "versionCode": 44,
-  "versionName": "1.44-JetpackCompose",
+  "versionCode": 45,
+  "versionName": "1.45-DashBoard",
   "mandatory": true,
-  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.44-JatpackCompose/TVSTREAMX.apk",
-  "changelog": "🚀 ATUALIZAÇÃO 1.44: NOVA ARQUITETURA\n\n• Migração total para Jetpack Compose (Design Moderno e Fluido).\n• Performance: Cache local via Room (Carregamento instantâneo).\n• Conectividade: Motor DoH Cloudflare otimizado para navegação ultra rápida.\n• Player: Modo esticado (Tela cheia) e suporte total a toque e controle remoto.\n• Debug: Painel 'Nerd Stats' para estatísticas técnicas de rede e vídeo."
+  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.45-DashBoard/TVSTREAMX.apk",
+  "changelog": "🚀 ATUALIZAÇÃO 1.45: NOVA ARQUITETURA\n\n• Migração total para Jetpack Compose (Design Moderno e Fluido).\n• Performance: Cache local via Room (Carregamento instantâneo).\n• Conectividade: Motor DoH Cloudflare otimizado para navegação ultra rápida.\n• Player: Modo esticado (Tela cheia) e suporte total a toque e controle remoto.\n• Debug: Painel 'Nerd Stats' para estatísticas técnicas de rede e vídeo."
 }
