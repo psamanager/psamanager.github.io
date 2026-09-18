@@ -1,7 +1,7 @@
 {
-  "versionCode": 42,
-  "versionName": "1.42-DebugBeta2",
+  "versionCode": 44,
+  "versionName": "1.44-JetpackCompose",
   "mandatory": true,
-  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.42-DebugBeta2/TVSTREAMX.apk",
-  "changelog": "🚀 NOVIDADES DA VERSÃO 1.42 (1.42-DebugBeta2)\n\n📅 Status da Conta no Topo: Usuário e data de validade visíveis direto na tela inicial, com alerta de renovação."
+  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.44-JatpackCompose/TVSTREAMX.apk",
+  "changelog": "🚀 ATUALIZAÇÃO 1.44: NOVA ARQUITETURA\n\n• Migração total para Jetpack Compose (Design Moderno e Fluido).\n• Performance: Cache local via Room (Carregamento instantâneo).\n• Conectividade: Motor DoH Cloudflare otimizado para navegação ultra rápida.\n• Player: Modo esticado (Tela cheia) e suporte total a toque e controle remoto.\n• Debug: Painel 'Nerd Stats' para estatísticas técnicas de rede e vídeo."
 }
