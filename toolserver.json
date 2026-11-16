@@ -1,0 +1,10 @@
+{
+  "versionCode": 7,
+  "versionName": "6.1.0",
+  "apkUrl": "https://github.com/psamanager/SEU-REPO/releases/download/v6.1.0/entity404-toolserver-v6.1.0.apk",
+  "changelog": "• Novo sistema OTA em background via WorkManager\n• Notificação automática mesmo com o app fechado\n• Verificação SHA-256 e assinatura oficial do APK",
+  "mandatory": false,
+  "minVersionCode": 1,
+  "sizeLabel": "18.5 MB",
+  "sha256": ""
+}
