@@ -1,10 +1,10 @@
 {
-  "versionCode": 9,
-  "versionName": "9.0.0",
+  "versionCode": 10,
+  "versionName": "10.0-BETA1",
   "apkUrl": "https://raw.githubusercontent.com/psamanager/psamanager.github.io/main/Entity404ToolServer.apk",
-  "changelog": "⚡ ENTITY404 TOOLSERVER v9.0.0-BETA\n\n• 6 Novos Módulos de Reconhecimento e Infraestrutura\n• IP-INFO TITAN, Origin Unmasker (Anti-CF) e Wayback Miner\n• Route Race (Multi-DNS), Dangling DNS e BGP Radar\n• Notificações OTA Instantâneas via Push FCM\n• Correções gerais de bugs e estabilidade de execução",
+  "changelog": "⚡ ENTITY404 TOOLSERVER v10.0-BETA1\n\n• CORREÇÃO CRÍTICA DE BUGS NO APP\n• Novo sistema de Notificações OTA Instantâneas via Push\n• 6 Novos Módulos: IP-INFO TITAN, Origin Unmasker e Wayback Miner\n• Route Race (Multi-DNS), Dangling DNS e BGP Prefix Radar\n• Otimizações gerais de estabilidade e consumo de memória",
   "mandatory": false,
   "minVersionCode": 1,
   "sizeLabel": "3.34 MB",
-  "sha256": "88C436F13CC633E4DF7308B211A3580FB69C5B0DEB9B747F3124AD93E2F6CC99"
+  "sha256": "30C823DDB04E071B89EA16A7E21D9FE066637EE5B4CB05FBDA0BC0C73AB20360"
 }
