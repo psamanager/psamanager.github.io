@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repositório
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Instalar google-auth e enviar Push via FCM HTTP v1
         env:
@@ -37,20 +37,41 @@ jobs:
           creds.refresh(Request())
           token = creds.token
 
+          v_name = str(manifest.get("versionName", ""))
+          v_code = str(manifest.get("versionCode", 0))
+          is_mandatory = bool(manifest.get("mandatory", False))
+          changelog = str(manifest.get("changelog", "Toque para atualizar o ENTITY404 ToolServer."))
+
+          titulo = f"Atualização Obrigatória • v{v_name}" if is_mandatory else f"Nova versão disponível • v{v_name}"
+          corpo = changelog.splitlines()[0] if changelog else "Toque para atualizar o ENTITY404 ToolServer."
+
           payload = {
               "message": {
                   "topic": "ota_updates",
+                  "notification": {
+                      "title": titulo,
+                      "body": corpo
+                  },
                   "android": {
                       "priority": "high",
-                      "ttl": "86400s"
+                      "ttl": "86400s",
+                      "notification": {
+                          "channel_id": "entity404_ota_alerts",
+                          "notification_priority": "PRIORITY_MAX",
+                          "default_sound": True,
+                          "default_vibrate_timings": True,
+                          "icon": "ic_launcher",
+                          "color": "#00E5FF"
+                      }
                   },
                   "data": {
+                      "extra_open_ota": "true",
                       "type": "ota_update",
-                      "versionCode": str(manifest.get("versionCode", 0)),
-                      "versionName": str(manifest.get("versionName", "")),
+                      "versionCode": v_code,
+                      "versionName": v_name,
                       "apkUrl": str(manifest.get("apkUrl", "")),
-                      "changelog": str(manifest.get("changelog", "")),
-                      "mandatory": str(manifest.get("mandatory", False)).lower(),
+                      "changelog": changelog,
+                      "mandatory": str(is_mandatory).lower(),
                       "sha256": str(manifest.get("sha256", "")),
                       "minVersionCode": str(manifest.get("minVersionCode", 1)),
                       "sizeLabel": str(manifest.get("sizeLabel", ""))
@@ -71,7 +92,7 @@ jobs:
 
           try:
               with urllib.request.urlopen(req) as resp:
-                  print("Push enviado com sucesso:", resp.read().decode("utf-8"))
+                  print("Push de Sistema enviado com sucesso:", resp.read().decode("utf-8"))
           except urllib.error.HTTPError as e:
               print("Erro HTTP FCM:", e.code, e.read().decode("utf-8"))
               raise
