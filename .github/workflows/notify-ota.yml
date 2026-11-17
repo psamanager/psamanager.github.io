@@ -1,0 +1,78 @@
+name: Notificar Atualização OTA (FCM)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'toolserver.json'
+  workflow_dispatch:
+
+jobs:
+  send-ota-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Autenticar no Firebase (FCM v1)
+        id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          token_format: 'access_token'
+          access_token_scopes: 'https://www.googleapis.com/auth/firebase.messaging'
+
+      - name: Enviar Push Instantâneo via FCM HTTP v1
+        env:
+          ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          SA_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, urllib.request, urllib.error
+
+          with open("toolserver.json", "r", encoding="utf-8") as f:
+              manifest = json.load(f)
+
+          sa = json.loads(os.environ["SA_JSON"])
+          project_id = sa["project_id"]
+          token = os.environ["ACCESS_TOKEN"]
+
+          payload = {
+              "message": {
+                  "topic": "ota_updates",
+                  "android": {
+                      "priority": "high",
+                      "ttl": "86400s"
+                  },
+                  "data": {
+                      "type": "ota_update",
+                      "versionCode": str(manifest.get("versionCode", 0)),
+                      "versionName": str(manifest.get("versionName", "")),
+                      "apkUrl": str(manifest.get("apkUrl", "")),
+                      "changelog": str(manifest.get("changelog", "")),
+                      "mandatory": str(manifest.get("mandatory", False)).lower(),
+                      "sha256": str(manifest.get("sha256", "")),
+                      "minVersionCode": str(manifest.get("minVersionCode", 1)),
+                      "sizeLabel": str(manifest.get("sizeLabel", ""))
+                  }
+              }
+          }
+
+          url = f"https://fcm.googleapis.com/v1/projects/{project_id}/messages:send"
+          req = urllib.request.Request(
+              url,
+              data=json.dumps(payload).encode("utf-8"),
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json; charset=utf-8"
+              },
+              method="POST"
+          )
+
+          try:
+              with urllib.request.urlopen(req) as resp:
+                  print("Push enviado com sucesso:", resp.read().decode("utf-8"))
+          except urllib.error.HTTPError as e:
+              print("Erro HTTP FCM:", e.code, e.read().decode("utf-8"))
+              raise
+          EOF
