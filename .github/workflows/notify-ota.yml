@@ -12,30 +12,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Autenticar no Firebase (FCM v1)
-        id: auth
-        uses: google-github-actions/auth@v3
-        with:
-          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          token_format: 'access_token'
-          access_token_scopes: 'https://www.googleapis.com/auth/firebase.messaging'
-
-      - name: Enviar Push Instantâneo via FCM HTTP v1
+      - name: Instalar google-auth e enviar Push via FCM HTTP v1
         env:
-          ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
           SA_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: |
+          python3 -m pip install --quiet google-auth requests
           python3 - <<'EOF'
           import json, os, urllib.request, urllib.error
+          from google.oauth2 import service_account
+          from google.auth.transport.requests import Request
 
           with open("toolserver.json", "r", encoding="utf-8") as f:
               manifest = json.load(f)
 
           sa = json.loads(os.environ["SA_JSON"])
           project_id = sa["project_id"]
-          token = os.environ["ACCESS_TOKEN"]
+
+          creds = service_account.Credentials.from_service_account_info(
+              sa,
+              scopes=["https://www.googleapis.com/auth/firebase.messaging"]
+          )
+          creds.refresh(Request())
+          token = creds.token
 
           payload = {
               "message": {
