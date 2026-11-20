@@ -1,7 +1,8 @@
 {
-  "versionCode": 45,
-  "versionName": "1.45-DashBoard",
+  "versionCode": 51,
+  "versionName": "1.51-BETA3",
   "mandatory": true,
-  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.45-DashBoard/TVSTREAMX.apk",
-  "changelog": "🚀 ATUALIZAÇÃO 1.45: NOVA ARQUITETURA\n\n• Migração total para Jetpack Compose (Design Moderno e Fluido).\n• Performance: Cache local via Room (Carregamento instantâneo).\n• Conectividade: Motor DoH Cloudflare otimizado para navegação ultra rápida.\n• Player: Modo esticado (Tela cheia) e suporte total a toque e controle remoto.\n• Debug: Painel 'Nerd Stats' para estatísticas técnicas de rede e vídeo."
+  "apkUrl": "https://github.com/psamanager/psamanager.github.io/releases/download/1.53-BETA3/TVSTREAMX.apk",
+  "sha256": "091081D18A32E06AAD957F9A020C4A53A2F500B57AEBAB5CC9C2E5F634A55390",
+  "changelog": "🚀 ATUALIZAÇÃO 1.49: ENTITY404 OS\n\n• Nova interface exclusiva estilo Sistema Operacional para Celular e TV.\n• Sincronização inteligente de Canais, Filmes e Séries com renovação automática.\n• Pastas organizadas por seção e busca instantânea.\n• Melhorias de estabilidade na reprodução e segurança reforçada."
 }
